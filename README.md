@@ -1,1 +1,1 @@
-# Trabajo Practico Tienda de Discos - Samir Rivera y Samir Rivera
+# Trabajo Practico Tienda de Discos - Samir Rivera y Donzalo Gelgado
