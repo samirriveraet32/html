@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Discos y Mas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<header><div class = "carrito-compra">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1AgmVuu3sRz5CFj84j27tB2JtVp7Bqb9ZYpPmky1muw&s=10" alt="Carrito de Compra" width="100" height="100">
+    <button id="button" onclick="mostrarCarrito(this)">Ver Carrito</button>    
+</div></header>
+
+
+
+
+
+
+
+
+<script>
+ let carrito = [];  
+ let precios= [];    
+ let total = 0
+ function mostrarCarrito(button){
+ const boton = button.id
+ const idEncontrado = document.getElementById(boton)  
+ 
+ if(carrito.length == 0){
+        alert("carrito vacio")
+    }else{
+        alert("el carrito contiene: "+ carrito)
+        alert("el preio total por ahora es: "+total)
+    }
+    }
+</script>
+   
+<div class="especial">
+    <h1>- SECCION DE DISCOS -</h1>
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=yURRmWtbTbo&list=OLAK5uy_kj27A8nGsJvL3fLIzmKVFlJZRh0c2k-kc">
+            <img   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOKooHtYF1dRy7S5bEQZ1MXMBbuP2SLGct53dJfrYrWQ&s=10" alt="Off the Wall" width="200" height="200">
+        </a>      
+        <button id=" Off The Wall" onclick="agregarDisco(this)" value= 1500>Agregar Disco (Off The Wall)</button>
+
+
+        <label><input type="checkbox" name="vinilo-cero"> Pasar a Vinilo ($10k Extra)</label>
+   
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=PpUtKCNYHJ8">
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdQUowzSqKbXQCM6MIJZqmLYdtHWeUpR3-lJ756skFXnv2qv5mzC8GUV_c&s=10" alt="Thriller" width="200" height="200">
+        </a>
+        <button id=" Thriller"onclick="agregarDisco(this)" value="1500">Agregar Disco (Thriller)</button>
+
+
+        <label><input type="checkbox" name="vinilo-uno"> Pasar a Vinilo ($10k Extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=-DlMoJ2V6uk&list=OLAK5uy_mCCaKGsT_u7Mi28CwaSrctzoew6G8TR1k">
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwag-5_EMMmkXv-yITziB7r_jqvK6EqAruUiCWKSOu6w&s=10" alt="Bad" width="200" height="200">
+        </a>
+        <button id=" Bad"onclick="agregarDisco(this)" value="1500">Agregar Disco (Bad)</button>
+
+
+        <label><input type="checkbox" name="vinilo-dos"> Pasar a Vinilo ($10k Extra)</label>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=UGT_9ah_YFo&list=PL15ty5GYCv5u0_w7pusvZtUP225slLmRT">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1bsCSX_aTRIW5Hb1nMqOa20uz_cv6odf8vXwsa_rkvg&s=10" width="200" height="200" alt="Dangerous">
+        </a>
+        <button id=" Dangerous" onclick="agregarDisco(this)" value="1500">Agregar Disco (Dangerous)</button>
+ 
+        <label><input type="checkbox" name="vinilo-tres"> Pasar a Vinilo ($10k Extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=8k1yj46xH24&list=PL15ty5GYCv5uDdbqMZNPVLeis1My2YV6O">
+            <img  src="https://upload.wikimedia.org/wikipedia/en/3/35/MJ-HIStory.jpg" alt="HIStory" width="200" height="200">
+        </a>
+        <button id=" HIStory"onclick="agregarDisco(this)" value="1500">Agregar Disco (HIStory)</button>
+
+
+        <label><input type="checkbox" name="vinilo-cuatro"> Pasar a Vinilo ($10k Extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=FTqaCHl5Ra4&list=PLnif9Rfb5AdldbkoeTyslmGSBftaVQsGX">
+            <img  src="https://upload.wikimedia.org/wikipedia/en/5/5c/Metallica_-_Kill_%27Em_All_cover.jpg" alt="Metallica" width="200" height="200">
+        </a>
+        <button id=" Metallica"onclick="agregarDisco(this)" value="1500">Agregar Disco (Metallica)</button>
+ 
+        <label><input type="checkbox" name="vinilo-cinco"> pasar a vinilo (10k extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=LKE_0uqlETE&list=PLBa1kGqV6kZq-yxKKv7sibMcOMt1ytGiH&pp=0gcJCUUDOCosWNin">
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoVxFY__I3vaq5OMGaXjx1kJYyUUist5V3UJcCAm4X0w&s=10" alt="The E.N.D" width="200" height="200">
+        </a>
+        <button id=" The E.N.D"onclick="agregarDisco(this)" value="1500">Agregar Disco (The E.N.D)</button>
+
+
+        <label><input type="checkbox" name="vinilo-seis"> pasar a vinilo (10k extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=pnnwZzk9ryg&list=PLF68808DADD2DB363">
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3_9N3A8YyR731FghegwoEsIk0fG-VcRykjHLYo1Bixg&s" alt="The handsome devil" width="200" height="200">
+        </a>
+        <button id=" The handsome devil" onclick="agregarDisco(this)" value="1500">Agregar Disco (The handsome devil)</button>
+
+
+        <label><input type="checkbox" name="vinilo-siete"> pasar a vinilo (10k extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=A2VpR8HahKc&list=PLSdoVPM5WnndSQEXRz704yQkKwx76GvPV">
+            <img  src="https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png" alt="Discovery" width="200" height="200">
+        </a>
+        <button id=" Discovery"onclick="agregarDisco(this)" value="1500">Agregar Disco (Discovery)</button>
+
+
+        <label><input type="checkbox" name="vinilo-ocho"> pasar a vinilo (10k extra)</label>
+    </div>
+   
+    <div class="tarjeta-disco">
+        <a href="https://www.youtube.com/watch?v=T7SjqSGmW6A&list=PL-YMUXzPXsLA5PgLFeUlIgCZho26iPYgz">
+            <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRyXd2MrX1fvMNw7Xyf1iAbUaPzcVnaXnKkPeQFVqmA&s=10" alt="Death of a party girl" width="200" height="200">
+        </a>
+        <button id=" Death of a party girl"onclick="agregarDisco(this)" value="1500">Agregar Disco (Death of a party girl)</button>
+        <label><input type="checkbox" name="vinilo-nueve"> pasar a vinilo (10k extra)</label>
+    </div>
+
+
+
+
+    <div class="tarjeta-sticker">
+    <h1>- SECCION DE STICKERS -</h1>
+   
+        <img  id="Gato Seductor" onclick="agregarSticker(this)" value=500 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD6MMTAsVspXdlB_Gx7BusfuPXUey0Nh_QjsKdE6EV0otMLiO7sM1jWn0&s=10" alt = "Gato Seductor" title = "Gato Seductor" width="150" height="150">
+       
+   
+   
+        <img   id="te kiero rata <3"  onclick="agregarSticker(this)" value=500 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooh73y_hEa8sE860VTX4DWP37974kjbdWd2jMXQnS2g&s"alt = "te kiero rata <3" title="te kiero rata <3" width="150" height="150">    
+   
+
+
+        <img  id="Gato Insano" onclick="agregarSticker(this)"  value=500 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEamY5I3q-XK2Zm2-u_PGLLzG80JjSXuaXrZIVpCh8LQ&s=10" alt = "Gato Insano" title="Gato Insano" width="150" height="150">    
+       
+     
+   
+        <img  id="Gato Normal" onclick="agregarSticker(this)" value=500 src="https://preview.redd.it/gato-sin-orejas-xd-v0-3z40f3il92hd1.jpg?width=640&crop=smart&auto=webp&s=42b239717b3148d1fd3f263e5f751965b35304e4"alt = "Gato Normal" title="Gato Normal" width="150" height="150" >    
+       
+     
+   
+        <img id="Gatos Especiales" onclick="agregarSticker(this)" value=500 src="https://preview.redd.it/low-res-image-of-cat-drooling-v0-8evde6lqwf2h1.jpeg?width=445&format=pjpg&auto=webp&s=4e734197864ef7aa3126d9d40560bc2a1fd55b7a" alt = "Gatos Especiales" title="Gatos Especiales" width="150" height="150">    
+   
+</div>
+       
+    <h1>- SECCION DE LIBROS -</h1>
+    <div class="tarjeta-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4kL7BupVd36YomJt8EJhNPnQNIgwRNGp81eyVTvnPhA&s=10" alt="El Principito" width="300" height="500">
+        <label><input type="checkbox" name="tapa-dura"> Tapa Dura </label>
+        <label><input type="checkbox" name="tapa-blanda"> Tapa Blanda</label>
+    </div>
+    <div class="tarjeta-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaXfTP7I4zGl-dX-3wWMPz-hU4RQViSuV2XLBAkd5E5Q&s" alt="Talon de Aquiles" width="300" height="500">
+        <label><input type="checkbox" name="tapa-dura"> Tapa Dura </label>
+        <label><input type="checkbox" name="tapa-blanda"> Tapa Blanda</label>    
+    </div>
+    <div class="tarjeta-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzgGLA7VTUvzJgFw6k3Q4GAYUSnaC7FT_HzsH4SEFcrA&s=10" alt="No Tengo Boca y Debo Gritar" width="300" height="500">
+        <label><input type="checkbox" name="tapa-dura"> Tapa Dura </label>
+        <label><input type="checkbox" name="tapa-blanda"> Tapa Blanda</label>
+    </div>
+    <div class="tarjeta-libro">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBS7hE886R-o0W2Zl7aq3Af0gtylRxIW11Oi1s0KwZUg&s=10" alt="Harry Potter" width="300" height="500">
+        <label><input type="checkbox" name="tapa-dura"> Tapa Dura </label>
+        <label><input type="checkbox" name="tapa-blanda"> Tapa Blanda</label>
+    </div>
+</body>
+
+
+<script>
+    function agregarDisco(button){
+        const boton = button.id
+        const idEncontrado = document.getElementById(boton)
+        const valueBoton = document.getElementById(boton).value;
+
+
+            total = 0;
+        carrito.push(boton);
+        precios.push(Number(valueBoton));
+        for(const numero of precios){
+            total += numero;
+           
+        }
+        }
+       
+        function agregarSticker(img){
+        const imagen = img.id
+        const idEncontrado = document.getElementById(imagen)
+        const valueImagen = document.getElementById(imagen).value;
+        total=0;
+        carrito.push(imagen);
+        precios.push(Number(valueImagen));
+
+
+        for(const numero of precios){
+            total += numero;
+           
+        }
+        }
+
+
+</script>
+</html>

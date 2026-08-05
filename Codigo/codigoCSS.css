@@ -1,0 +1,98 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.galeria-discos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+.tarjeta-disco {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 200px;
+}
+
+
+
+
+
+
+
+
+.tarjeta-disco button {
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+.tarjeta-disco label {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+
+
+
+.tarjeta-sticker {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 1300px;
+}
+
+
+
+
+
+
+
+
+.tarjeta-libro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 900px;
+}
+
+
+
+
+.carrito-compra {
+    display: flex;
+    align-items:flex-end ;
+}
+
+
+
